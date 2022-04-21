@@ -42,7 +42,7 @@ class AuthRepositoryImpl (
             val body = response.body() ?: return@flow
 
             val html = body.string()
-           Log.e("response", html)
+            Log.e("response", html)
 
             if(html.contains("lblError")) {
                 emit(Resource.Error("Usuario o contraseña icorrectos"))
