@@ -1,9 +1,10 @@
-package com.tortasmcfly.teclaguna
+package com.tortasmcfly.teclaguna.core.presentation.main_activities
 
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.tortasmcfly.teclaguna.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @Suppress("DEPRECATION")

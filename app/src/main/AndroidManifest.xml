@@ -14,7 +14,7 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.TecLaguna">
         <activity
-            android:name=".MainActivity"
+            android:name=".core.presentation.main_activities.MainActivity"
             android:theme="@style/Theme.TecLaguna"
             android:exported="true">
             <intent-filter>
