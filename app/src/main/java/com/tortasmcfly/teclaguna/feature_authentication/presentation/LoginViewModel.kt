@@ -27,7 +27,7 @@ class LoginViewModel @Inject constructor(
             isLoggedInUseCase().collectLatest { result ->
                 when(result) {
                     is Resource.Success -> {
-                        if(result.data == true) {
+                        if(result.data ?: false) {
                             _eventFlow.emit(UIEvent.NavigateToHome)
                         }
                     }

@@ -16,6 +16,8 @@
         <activity
             android:name=".core.presentation.main_activities.MainActivity"
             android:theme="@style/Theme.TecLaguna"
+            android:screenOrientation="portrait"
+            android:noHistory="true"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +25,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".core.presentation.main_activities.HomeActivity"
+            android:theme="@style/Theme.TecLaguna"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
     </application>
 
 </manifest>
