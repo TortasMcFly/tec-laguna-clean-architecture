@@ -1,6 +1,5 @@
 package com.tortasmcfly.teclaguna.feature_authentication.presentation
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.tortasmcfly.teclaguna.core.util.Resource
