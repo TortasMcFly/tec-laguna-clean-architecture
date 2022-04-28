@@ -3,7 +3,6 @@ package com.tortasmcfly.teclaguna.feature_authentication.data.repository
 import android.util.Log
 import com.tortasmcfly.teclaguna.core.util.Resource
 import com.tortasmcfly.teclaguna.feature_authentication.data.local.StudentDao
-import com.tortasmcfly.teclaguna.feature_authentication.data.local.entity.StudentEntity
 import com.tortasmcfly.teclaguna.feature_authentication.data.local.entity.toDatabase
 import com.tortasmcfly.teclaguna.feature_authentication.data.remote.AuthApi
 import com.tortasmcfly.teclaguna.feature_authentication.data.util.Constants
@@ -12,7 +11,6 @@ import com.tortasmcfly.teclaguna.feature_authentication.domain.repository.AuthRe
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import okhttp3.MultipartBody
-import org.jsoup.Jsoup
 import retrofit2.HttpException
 import java.io.IOException
 
@@ -58,10 +56,6 @@ class AuthRepositoryImpl (
 
             var jsessionid = cookieList[0].split(";").toTypedArray()[0]
             jsessionid = jsessionid.replace("ASP.NET_SessionId=", "")
-
-            val document = Jsoup.parse(html)
-            val name = document.getElementById("__VIEWSTATEGENERATOR").`val`()
-            Log.d("__VIEWSTATEGENERATOR", name)
 
             val student = Student(
                 controlNumber = controlNumber,

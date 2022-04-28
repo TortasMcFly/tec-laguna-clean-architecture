@@ -13,7 +13,7 @@ data class StudentEntity(
     var specialityId: String? = null,
     var speciality: String? = null,
     var sessionId: String? = null,
-    @PrimaryKey val id: Int? = null
+    @PrimaryKey(autoGenerate = true) val id: Int? = null
 )
 
 fun Student.toDatabase() = StudentEntity(
